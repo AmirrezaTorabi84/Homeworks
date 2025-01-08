@@ -1,0 +1,18 @@
+using System;
+
+namespace TurnIntoBinary
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Please enter the last 4 digits of your student number:");
+            int user4Digit = int.Parse(Console.ReadLine());
+
+            string binaryForm = Convert.ToString(user4Digit, 2);
+
+            Console.WriteLine($"Binary of {user4Digit} is: {binaryForm}");
+            Console.ReadKey();
+        }
+    }
+}
