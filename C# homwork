@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your Number");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+            int f1 = 0;
+            int f2 = 1;
+            int f3;
+            if (userNumber == 2)
+            {
+                Console.WriteLine($"{f1}, {f2}");
+            }
+            else
+            {
+                Console.Write($"{f1}, {f2}, ");
+                for (int i = 0; i < userNumber; i++)
+                {
+                    f3 = f1 + f2;
+                    Console.Write($"{f3}, ");
+                    f1 = f2;
+                    f2 = f3;
+                }
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
